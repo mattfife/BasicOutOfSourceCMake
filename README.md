@@ -33,7 +33,7 @@ And countless others. It's benefits really pay off as your project grows.
 ![cmake2](https://user-images.githubusercontent.com/11483217/131196407-ffc079e4-0b4e-4cbd-b539-d9040923f187.png)
 
 ### Build binaries using msbuild
-6. In the Developer Command Prompt for VS2019 window, in the bin\ directory, run: 'msbuild helloworld.sln'
+6. In the Developer Command Prompt for VS2019 window, in the bin\ directory, run: `msbuild helloworld.sln`
 7. msbuild will build the debug version of helloworld.exe in `...\bin\src\Debug\`
 8. Read up on [msbuild command line options](https://docs.microsoft.com/en-us/visualstudio/msbuild/walkthrough-using-msbuild?view=vs-2019#build-the-target) for building different configurations (debug/release, x64/x32, etc)
 ![msbuild](https://user-images.githubusercontent.com/11483217/131196449-9be9d9de-1925-414b-9138-b1a8f20972f4.png)
