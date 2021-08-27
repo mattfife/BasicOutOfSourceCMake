@@ -23,8 +23,11 @@ And countless others. It's benefits really pay off as your project grows.
 
 2. From the start menu, open the Developer Command Prompt for VS2019
 3. Download this source to a convenient local directory and cd into that directory
-4. Run `build.bat`
+4. You can either run `build.bat`, or use the command line `cmake -H. -Bbin` if you are using Cmake 3.13 or later
 ![image](https://user-images.githubusercontent.com/11483217/118386271-26ddf100-b5cb-11eb-95d9-0447ae697b2b.png)
+If you opt for `cmake -H. -Bbin`, `-H.` tells cmake where to find CMakeLists.txt (current directory in this case) and `-Bbin' tells it to put the generated files in `.\bin`
+![noscript](https://user-images.githubusercontent.com/11483217/131198934-6757c56f-2324-4ba0-9c63-42840a169813.png)
+
 5. This builds the project and make files in `...\bin\`. To build the actual project/binaries, you have 3 options:
 
 ### Build binaries with cmake
@@ -43,12 +46,11 @@ And countless others. It's benefits really pay off as your project grows.
 7. Open the newly created helloworld.sln found in the bin/ directory. 
 8. Build from the main Build top menu like normal
 
-### Visual Studio project tips
-- If you change any of your CMake files (ex: add/remove source files), you can build ZERO_CHECK, or re-run build.sh again. This we re-generate the solution and vsproj files.
+### Visual Studio project notes
 - Windows CMake automatically makes 2 additional projects in your solution: ALL_BUILD and ZERO_CHECK.
-  - ALL_BUILD will build all projects in the solution (except itself)
+  - ALL_BUILD will build all projects in the solution (except itself and ZERO_CHECK)
   - ZERO_CHECK will re-run CMAKE and generate all new vproj and sln files. This is handy if you change your CMakeFiles and need to re-run CMake.
-  - You cannot generate a solution with CMake without an ALL_BUILD project, but you can prevent CMake from adding the ZERO_CHECK project by adding this line to your top-level CMakeLists.txt: `set(CMAKE_SUPPRESS_REGENERATION true)`
+  - CMAKE cannot generate a solution without an ALL_BUILD project, but you can prevent CMake from adding the ZERO_CHECK project by adding this line to your top-level CMakeLists.txt: `set(CMAKE_SUPPRESS_REGENERATION true)`
 
 ## Instructions for Linux
 1. Ensure that you have CMake, git, gcc, and other build tools you'd like. Installing the build-essential package contains most key build tools.
