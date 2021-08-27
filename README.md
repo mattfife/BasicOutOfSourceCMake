@@ -60,5 +60,5 @@ And countless others. It's benefits really pay off as your project grows.
 
 ## Optimizations
 - Versions of CMake past 3.13 support parameters that can help you make out-of-source builds more directly (without using the build script) by using the flags:
-cmake -H. -Bbuild 
+`cmake -H. -Bbuild`
 
