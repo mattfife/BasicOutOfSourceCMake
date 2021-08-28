@@ -1,7 +1,7 @@
 # BasicOutOfSourceCMake
 
 ## Introduction
-The topic of out of source builds is often not explained simply and examples tend to get overly complex too quickly. I have tried to create the most minimal out of source CMake example here. This works with both Visual Studio and Linux. There are countless enhancements that can be made to this simplified version, but this is a great starting point.
+The topic of out of source builds is often not explained simply and examples tend to get overly complex too quickly. I have tried to create the most minimal out of source CMake 'hello world' example here. This works with both Visual Studio and Linux. There are countless enhancements that can be made to this simplified version, but this is a great starting point.
 
 ## Out of Source Builds
 In case you're not familiar with out of source builds, traditional build systems tend to compile their intermediate binary files (obj files, libs, executables, dlls, etc) right next to their source files. This means binary and source files are mixed all over in the source tree. Out of source builds, however, put all binary and intermediate files in their own directory (often a bin/ directory) and keep them all out of the source (often src/) directory.  
