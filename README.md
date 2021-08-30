@@ -1,4 +1,4 @@
-# Basic Out Of Source CMake for Windows and Linux
+# Out Of Source CMake Example for Windows and Linux
 
 ## Introduction
 The topic of out of source builds is often not explained simply and examples tend to get overly complex too quickly. I have tried to create the most minimal out of source CMake 'hello world' example here. This works with both Visual Studio and Linux. There are countless enhancements that can be made to this simplified version, but this is a great starting point.
